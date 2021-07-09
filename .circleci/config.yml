@@ -34,9 +34,12 @@ jobs:
           fingerprints:
           - "2b:cc:87:ca:2d:5d:ea:2d:d9:18:ac:6d:12:50:4a:2c"
       - run: ssh -oStrictHostKeyChecking=no trizn610@34.69.226.231
-      - checkout:
-          path: ~/opt/react-docker
-      - run: './deploy.sh'
+      - run:
+          name: change directory
+          command: 'cd ~/opt/react-docker'
+      - run: 
+          name: run deploy
+          command: './deploy.sh'
 workflows:
   my-pipeline: 
     jobs:
