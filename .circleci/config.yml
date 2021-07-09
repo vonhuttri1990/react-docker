@@ -33,7 +33,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
           - "2b:cc:87:ca:2d:5d:ea:2d:d9:18:ac:6d:12:50:4a:2c"
-      - run: ssh -oStrictHostKeyChecking=no trizn610@34.69.226.231 'cd /opt/react-docker' './deploy.sh'
+      - run: ssh -oStrictHostKeyChecking=no trizn610@34.69.226.231 './deploy.sh'
 workflows:
   my-pipeline: 
     jobs:
